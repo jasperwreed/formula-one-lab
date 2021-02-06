@@ -18,13 +18,13 @@ describe 'Driver' do
     end
 
     it 'pushes new instances into a class variable called @@all upon initialization' do
-      expect(Driver.class_variable_set(:@@all)).to match([driver, driver2, driver3])
+      expect(Driver.class_variable_get(:@@all)).to match([driver, driver2, driver3])
     end
   end
 
   describe '@@all' do
     it 'is a class variable set to an array' do
-      expect(Driver.class_variable_set(:@@ll)).to be_a(Array)
+      expect(Driver.class_variable_get(:@@ll)).to be_a(Array)
     end
   end
 
